@@ -90,3 +90,9 @@ h1 {
     display: none;
   }
 }
+
+
+.group-buttons{
+  display: flex;
+  gap: 10px;
+}

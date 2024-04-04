@@ -1,6 +1,10 @@
 import { LitElement, html, css } from 'lit';
 
 export class KtButton extends LitElement {
+  static properties = {
+    action: { type: String } // Define a property to indicate the action
+  };
+
  static styles = css`
     button {
       background-color: purple;
@@ -13,17 +17,16 @@ export class KtButton extends LitElement {
   `;
 
   render() {
-    return html`<button @click="${this.handleClick}"><slot></slot></button>`;
+    return html`<button id="${this.idn}" @click="${this.handleClick}"><slot></slot></button>`;
   }
 
   handleClick() {
-    console.log("this works ?")
-    // Dispatch a custom event when the button is clicked
-        let customEvent = new CustomEvent("clickRippleButton", {
+    const customEvent = new CustomEvent("clickRippleButton", {
       bubbles: true,
       composed: true,
-      detail: { value: "hello response from lit" },
+      detail: this.action
     });
+
     this.dispatchEvent(customEvent);
   }
 }
