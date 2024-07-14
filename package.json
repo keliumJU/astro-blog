@@ -13,12 +13,7 @@
     "@astrojs/lit": "^4.0.1",
     "@astrojs/preact": "^3.1.1",
     "@astrojs/rss": "^4.0.5",
-    "@clevercloud/components": "^13.0.0",
-    "@shoelace-style/shoelace": "^2.15.0",
-    "@spectrum-web-components/button": "^0.42.0",
-    "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^4.5.10",
-    "lit": "^3.1.2",
     "preact": "^10.20.1"
   }
 }
